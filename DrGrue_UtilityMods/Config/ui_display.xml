@@ -1,0 +1,21 @@
+<config>
+
+<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\ui_display.xml']" />
+
+<!-- Adds Crafting Tier display info for Nerdy Glasses -->	
+<!-- Target code  -->
+<!--
+    <item_display_info display_type="clothingNerdGlasses" display_group="groupAttire">
+	    <display_entry name="AttributeLevel" tags="attIntellect" title_key="statShowIntellect" display_leading_plus="true"/>
+	    <display_entry name="dCraftingTime" title_key="statCraftingTime" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+	    <display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+    </item_display_info>
+-->
+
+	<insertBefore xpath="ui_display_info/item_display/item_display_info[@display_type='clothingNerdGlasses']/display_entry[@name='AttributeLevel']">
+		<display_entry name="dCraftingTier" title_key="statCraftingTier" display_type="Integer" display_leading_plus="true"/>
+	</insertBefore>	
+	
+	
+</config>

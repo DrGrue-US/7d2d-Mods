@@ -1,0 +1,59 @@
+<config>
+
+<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\blocks.xml']" />
+	
+	<!-- reduces heat for player light sources -->
+		<!-- Removed because these are default values now -->
+        <!-->
+        <set xpath="/blocks/block[@name='wallTorchLightPlayer']/property[@name='HeatMapStrength']/@value">1</set>
+		<set xpath="/blocks/block[@name='burningBarrelPlayer']/property[@name='HeatMapStrength']/@value">1</set> -->
+		-->
+        <!-- Changes Light Opacity for Bulletproof glass so motion sensors can see through it. -->
+		<set xpath="/blocks/block[@name='glassBulletproofMaster']/property[@name='LightOpacity']/@value">0</set>
+		
+	<!-- increase stack number for generator banks -->
+		<set xpath="/blocks/block[@name='generatorbank']/property[@name='Stacknumber']/@value">10</set>
+		<set xpath="/blocks/block[@name='solarbank']/property[@name='Stacknumber']/@value">10</set>
+		<set xpath="/blocks/block[@name='batterybank']/property[@name='Stacknumber']/@value">10</set>
+		
+	<!-- Removes Explosion property from vehicles and gas pump -->
+		<remove xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/property[@class='Explosion']" />
+		<remove xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/property[@class='Explosion']" />
+		<remove xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/property[@class='Explosion']" />
+		<remove xpath="/blocks/block[@name='cntBusSchool']/property[@class='Explosion']" />
+		<remove xpath="/blocks/block[@name='cntGasPump']/property[@class='Explosion']" />
+	
+    <!-- Allows advanced rotation -->
+	<set xpath="/blocks/block[@name='metalReinforcedWoodDrawBridge']/property[@name='OnlySimpleRotations']/@value">false</set>
+	
+	<!-- allows player to power and repair streetlights -->
+	<set xpath="/blocks/block[@name='streetLight01']/property[@name='Class']/@value">PoweredLight</set>
+	<append xpath="/blocks/block[@name='streetLight01']">
+		<property name="RequiredPower" value="5"/>
+		<property name="Light" value="1"/>
+		<property class="RepairItems">
+			<property name="resourceElectricParts" value="6"/>
+			<property name="resourceScrapIron" value="40"/>
+		</property>
+	</append>
+
+    <!-- Removed because it was causing Unity error "InvalidCastException: Specified cast is not valid", try again on fresh map -->
+    <!--	
+	<set xpath="/blocks/block[@name='porchLight01']/property[@name='Class']/@value">PoweredLight</set>
+	
+	<append xpath="/blocks/block[@name='porchLight01']">
+		<property name="RequiredPower" value="5"/>
+		<property name="Light" value="1"/>
+		<property class="RepairItems">
+			<property name="resourceElectricParts" value="6"/>
+			<property name="resourceScrapIron" value="40"/>
+		</property>
+	</append>
+	-->
+	
+
+		
+		
+</config>
+

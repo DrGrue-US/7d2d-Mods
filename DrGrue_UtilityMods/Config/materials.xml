@@ -1,0 +1,15 @@
+<config>
+
+<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\materials.xml']" />
+	
+    <!-- Opacity changes in materials.xml are not overridden in blocks.xml, this should make motion sensors "see through" bulletproof glass -->
+    <set xpath="/materials/material[@id='MglassBulletproof']/property[@name='lightopacity']/@value">0</set>	
+	
+    <!-- Collision filters added at block.xml level. -->
+	<insertAfter xpath="/materials/material[@id='MglassBulletproof']/property[@name='Experience']" >
+		<property name="collidable" value="false"/>
+	</insertAfter>
+
+	
+</config>

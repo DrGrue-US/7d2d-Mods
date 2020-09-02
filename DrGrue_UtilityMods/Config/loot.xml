@@ -1,0 +1,48 @@
+<config>
+
+<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\loot.xml']" />
+	
+<!-- Adds 'Fiver' Token and Mega Token to Rare Ores, Apache Artifact Chest, and Mountain Man Chest -->
+	<append xpath="/lootcontainers/lootgroup[@name='rareOres']">
+		<item name="Duke's 'Fiver' Token" count="1" prob="0.01"/> <!-- 1 in 2000 -->
+	</append>
+	
+	<append xpath="/lootcontainers/lootcontainer[@id='56']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>
+	
+	<append xpath="/lootcontainers/lootcontainer[@id='63']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='rareOres']">
+		<item name="Duke's Mega Token" count="1" prob="0.005"/> <!-- 1 in 4000 -->
+	</append>
+	
+	<append xpath="/lootcontainers/lootcontainer[@id='56']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>
+	
+	<append xpath="/lootcontainers/lootcontainer[@id='63']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>
+	
+<!-- Adds Santa Hat to loot list -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupApparelHats']" >
+			<item name="armorSantaHat" mods="dye" mod_chance="0.00"/>
+	</append>	
+	
+<!-- Makes various containers as big as a storage box because I like to use them for storage -->
+	<set xpath="/lootcontainers/lootcontainer[@id='40']/@size">8,9</set>	
+	<set xpath="/lootcontainers/lootcontainer[@id='43']/@size">8,9</set>	
+	<set xpath="/lootcontainers/lootcontainer[@id='47']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='49']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='51']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='52']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='64']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='128']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='129']/@size">8,9</set>
+	
+	
+</config>
