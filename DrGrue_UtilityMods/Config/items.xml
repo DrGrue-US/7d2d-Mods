@@ -1,120 +1,123 @@
-<config>
-
-<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\items.xml']" />
-	
-<!-- Re-add Crafting Tier Bonus to Nerdy Glasses -->
-<!-- Target code -->
-<!-- <item name="apparelNerdGlasses">
-	<property name="Extends" value="apparelShades"/>
-	<property name="DisplayType" value="clothingNerdGlasses"/>
-	<property class="UMA">
-		<property name="Mesh" value="specs"/>
-		<property name="Overlay0" value="specs"/>
-	</property>
-	<property name="DescriptionKey" value="apparelNerdGlassesDesc"/>
-	<property name="EconomicValue" value="1000"/>
-	<effect_group tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
-		<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
-		<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
-		<display_value name="dCraftingTime" value="-.1"/>
-		<display_value name="dPlayerExpGain" value=".1"/>
-	</effect_group>
-</item>
--->
-
-	<insertAfter xpath="/items/item[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='PlayerExpGain']"> 
-		<passive_effect name="CraftingTier" operation="base_add" value="1"/>
-		<display_value name="dCraftingTier" value="1"/>
-	</insertAfter>
-	
-	
-<!-- EconomicValue Changes to make Beer and Grain Alcohol viable trade goods -->	
-	<set xpath="/items/item[@name='drinkJarBeer']/property[@name='EconomicValue']/@value">200</set>
-	<set xpath="/items/item[@name='drinkJarGrainAlcohol']/property[@name='EconomicValue']/@value">300</set>
-
-<!-- Class rules for stacknumber by item type -->		
-	<set xpath="/items/item[starts-with(@name, 'food')]/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[starts-with(@name, 'drink')]/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[starts-with(@name, 'foodCrop')]/property[@name='Stacknumber']/@value">5000</set>
-	<set xpath="/items/item[starts-with(@name, 'ammo')]/property[@name='Stacknumber']/@value">5000</set>
-	<set xpath="/items/item[starts-with(@name, 'resource')]/property[@name='Stacknumber']/@value">30000</set>
-	
-	<set xpath="/items/item[starts-with(@name, 'tool')]/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[starts-with(@name, 'thrown')]/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[starts-with(@name, 'medical')]/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set>
-
-<!-- Food/Drink Exceptions -->		
-	<set xpath="/items/item[@name='drinkCanEmpty']/property[@name='Stacknumber']/@value">500</set>	
-	<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">500</set>	
-	<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">500</set>
-	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">500</set>
-	<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">500</set>	
-
-<!-- meleeTool and Books Exceptions -->	
-	<set xpath="/items/item[@name='meleeToolTorch']/property[@name='Stacknumber']/@value">50</set>	
-	<set xpath="/items/item[@name='meleeToolWireTool']/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[@name='questMaster']/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">50</set>
-
-<!-- Misc Exceptions -->		
-	<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[@name='candle']/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set>	
-	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set>
-		
-<!-- Resource Bundles -->	
-	<set xpath="/items/item[@name='resourceRockSmallBundle']/property/property[@name='Create_item_count']/@value">30000</set>	
-	<set xpath="/items/item[@name='resourceWoodBundle']/property/property[@name='Create_item_count']/@value">30000</set>	
-	<set xpath="/items/item[@name='resourceScrapIronBundle']/property/property[@name='Create_item_count']/@value">30000</set>	
-	<set xpath="/items/item[@name='resourcePotassiumNitratePowderBundle']/property/property[@name='Create_item_count']/@value">30000</set>	
-	<set xpath="/items/item[@name='resourceLeadBundle']/property/property[@name='Create_item_count']/@value">30000</set>
-	<set xpath="/items/item[@name='resourceCoalBundle']/property/property[@name='Create_item_count']/@value">30000</set>		
-	<set xpath="/items/item[@name='resourceOilShaleBundle']/property/property[@name='Create_item_count']/@value">30000</set>
-		
-
-<!-- Add Casino Bundles -->
-		
-	<append xpath="/items" >
-		<item name="Duke's 'Fiver' Token">
-			<property name="Extends" value="casinoCoin"/>
-			<property name="Stacknumber" value="50"/> <!-- STK resource -->
-			<property name="CustomIcon" value="casinoCoin" />
-			<property name="CustomIconTint" value="ffb0b0" />
-			<property name="DescriptionKey" value="casinoCoinDesc"/>	
-			<property class="Action0">
-				<property name="Class" value="OpenBundle"/>
-				<property name="Delay" value="0"/>
-				<property name="Use_time" value="0"/>
-				<property name="Sound_start" value="open_cash_register"/>
-				<property name="Create_item" value="casinoCoin"/>
-				<property name="Create_item_count" value="5000"/>
-			</property>
-		</item>		
-		
-		<item name="Duke's Mega Token">
-			<property name="Extends" value="casinoCoin"/>
-			<property name="Stacknumber" value="50"/> <!-- STK resource -->
-			<property name="CustomIcon" value="casinoCoin" />
-			<property name="CustomIconTint" value="110,173,255" />
-			<property name="DescriptionKey" value="casinoCoinDesc"/>	
-			<property class="Action0">
-				<property name="Class" value="OpenBundle"/>
-				<property name="Delay" value="0"/>
-				<property name="Use_time" value="0"/>
-				<property name="Sound_start" value="open_cash_register"/>
-				<property name="Create_item" value="casinoCoin"/>
-				<property name="Create_item_count" value="30000"/>
-			</property>
-		</item>		
-		
-		
-	</append>
-	
-
+<config> 
+ 
+<!-- This will log as a WRN to create a log entry on startup showing this file was read --> 
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\items.xml']" /> 
+	 
+<!-- Re-add Crafting Tier Bonus to Nerdy Glasses --> 
+<!-- Target code --> 
+<!-- <item name="apparelNerdGlasses"> 
+	<property name="Extends" value="apparelShades"/> 
+	<property name="DisplayType" value="clothingNerdGlasses"/> 
+	<property class="UMA"> 
+		<property name="Mesh" value="specs"/> 
+		<property name="Overlay0" value="specs"/> 
+	</property> 
+	<property name="DescriptionKey" value="apparelNerdGlassesDesc"/> 
+	<property name="EconomicValue" value="1000"/> 
+	<effect_group tiered="false"> 
+		<passive_effect name="ModSlots" operation="base_set" value="0"/> 
+		<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/> 
+		<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/> 
+		<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/> 
+		<display_value name="dCraftingTime" value="-.1"/> 
+		<display_value name="dPlayerExpGain" value=".1"/> 
+	</effect_group> 
+</item> 
+--> 
+ 
+	<insertAfter xpath="/items/item[@name='apparelNerdGlasses']/effect_group">    
+		<effect_group tiered="false" name="Adds Crafting Bonus synergy while Nerd Tats are active">
+			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			<passive_effect name="CraftingTier" operation="base_add" value="1"/> 
+			<display_value name="dCraftingTier" value="1"/> 
+		</effect_group>
+	</insertAfter> 
+	 
+	 
+<!-- EconomicValue Changes to make Beer and Grain Alcohol viable trade goods -->	 
+	<set xpath="/items/item[@name='drinkJarBeer']/property[@name='EconomicValue']/@value">200</set> 
+	<set xpath="/items/item[@name='drinkJarGrainAlcohol']/property[@name='EconomicValue']/@value">300</set> 
+ 
+<!-- Class rules for stacknumber by item type -->		 
+	<set xpath="/items/item[starts-with(@name, 'food')]/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[starts-with(@name, 'drink')]/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[starts-with(@name, 'foodCrop')]/property[@name='Stacknumber']/@value">5000</set> 
+	<set xpath="/items/item[starts-with(@name, 'ammo')]/property[@name='Stacknumber']/@value">5000</set> 
+	<set xpath="/items/item[starts-with(@name, 'resource')]/property[@name='Stacknumber']/@value">30000</set> 
+	 
+	<set xpath="/items/item[starts-with(@name, 'tool')]/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[starts-with(@name, 'thrown')]/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[starts-with(@name, 'medical')]/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set> 
+ 
+<!-- Food/Drink Exceptions -->		 
+	<set xpath="/items/item[@name='drinkCanEmpty']/property[@name='Stacknumber']/@value">500</set>	 
+	<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">500</set>	 
+	<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">500</set> 
+	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">500</set> 
+	<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">500</set>	 
+ 
+<!-- meleeTool and Books Exceptions -->	 
+	<set xpath="/items/item[@name='meleeToolTorch']/property[@name='Stacknumber']/@value">50</set>	 
+	<set xpath="/items/item[@name='meleeToolWireTool']/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[@name='questMaster']/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">50</set> 
+ 
+<!-- Misc Exceptions -->		 
+	<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[@name='candle']/property[@name='Stacknumber']/@value">50</set> 
+	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set>	 
+	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set> 
+		 
+<!-- Resource Bundles -->	 
+	<set xpath="/items/item[@name='resourceRockSmallBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
+	<set xpath="/items/item[@name='resourceWoodBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
+	<set xpath="/items/item[@name='resourceScrapIronBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
+	<set xpath="/items/item[@name='resourcePotassiumNitratePowderBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
+	<set xpath="/items/item[@name='resourceLeadBundle']/property/property[@name='Create_item_count']/@value">30000</set> 
+	<set xpath="/items/item[@name='resourceCoalBundle']/property/property[@name='Create_item_count']/@value">30000</set>		 
+	<set xpath="/items/item[@name='resourceOilShaleBundle']/property/property[@name='Create_item_count']/@value">30000</set> 
+		 
+ 
+<!-- Add Casino Bundles --> 
+		 
+	<append xpath="/items" > 
+		<item name="Duke's 'Fiver' Token"> 
+			<property name="Extends" value="casinoCoin"/> 
+			<property name="Stacknumber" value="50"/> <!-- STK resource --> 
+			<property name="CustomIcon" value="casinoCoin" /> 
+			<property name="CustomIconTint" value="ffb0b0" /> 
+			<property name="DescriptionKey" value="casinoCoinDesc"/>	 
+			<property class="Action0"> 
+				<property name="Class" value="OpenBundle"/> 
+				<property name="Delay" value="0"/> 
+				<property name="Use_time" value="0"/> 
+				<property name="Sound_start" value="open_cash_register"/> 
+				<property name="Create_item" value="casinoCoin"/> 
+				<property name="Create_item_count" value="5000"/> 
+			</property> 
+		</item>		 
+		 
+		<item name="Duke's Mega Token"> 
+			<property name="Extends" value="casinoCoin"/> 
+			<property name="Stacknumber" value="50"/> <!-- STK resource --> 
+			<property name="CustomIcon" value="casinoCoin" /> 
+			<property name="CustomIconTint" value="110,173,255" /> 
+			<property name="DescriptionKey" value="casinoCoinDesc"/>	 
+			<property class="Action0"> 
+				<property name="Class" value="OpenBundle"/> 
+				<property name="Delay" value="0"/> 
+				<property name="Use_time" value="0"/> 
+				<property name="Sound_start" value="open_cash_register"/> 
+				<property name="Create_item" value="casinoCoin"/> 
+				<property name="Create_item_count" value="30000"/> 
+			</property> 
+		</item>		 
+		 
+		 
+	</append> 
+	 
+ 
 </config>
