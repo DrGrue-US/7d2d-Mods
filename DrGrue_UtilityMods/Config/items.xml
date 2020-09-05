@@ -25,13 +25,21 @@
 </item> 
 --> 
  
-	<insertAfter xpath="/items/item[@name='apparelNerdGlasses']/effect_group">    
-		<effect_group tiered="false" name="Adds Crafting Bonus synergy while Nerd Tats are active">
+	<insertAfter xpath="/items/item[@name='apparelNerdGlasses']/effect_group">  
+		<effect_group tiered="false" name="Adds Crafting Bonus when Nerd Tats are active">
 			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
 			<passive_effect name="CraftingTier" operation="base_add" value="1"/> 
-			<display_value name="dCraftingTier" value="1"/> 
+			<display_value name="dCraftingTier" value=".5"/> 
 		</effect_group>
 	</insertAfter> 
+	
+	<insertAfter xpath="/items/item[@name='drugNerdTats']/effect_group">  
+		<effect_group tiered="false" name="Adds Crafting Bonus when Nerd Tats are active">	
+			<display_value name="dCraftingTier" value=".5"/> 
+		</effect_group>
+	</insertAfter> 
+	
+	
 	 
 	 
 <!-- EconomicValue Changes to make Beer and Grain Alcohol viable trade goods -->	 
