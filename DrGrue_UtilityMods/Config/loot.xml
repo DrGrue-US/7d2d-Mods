@@ -41,6 +41,8 @@
 	<set xpath="/lootcontainers/lootcontainer[@id='51']/@size">8,9</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='52']/@size">8,9</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='64']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='124']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='125']/@size">8,9</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='128']/@size">8,9</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='129']/@size">8,9</set>
 	
