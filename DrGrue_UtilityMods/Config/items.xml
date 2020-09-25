@@ -89,6 +89,15 @@
 	<set xpath="/items/item[@name='resourceOilShaleBundle']/property/property[@name='Create_item_count']/@value">30000</set> 
 		 
  
+<!-- Adds gas bundle recipe at same time as regular recipe -->
+ 	<insertAfter xpath="/items/item[@name='ammoGasCanSchematic']/effect_group">  
+		<effect_group tiered="false" name="Adds Bundle recipe at same time">	
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoGasCanBundle" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		</effect_group>
+	</insertAfter> 
+ 
+ 
 <!-- Add Casino Bundles --> 
 		 
 	<append xpath="/items" > 
