@@ -62,6 +62,16 @@
 		<recipe name="resourceCoal" count="1" craft_exp_gain="0" craft_area="chemistryStation" craft_time="10" always_unlocked="true">
 			<ingredient name="resourceWood" count="5"/>
 		</recipe>
+
+<!-- Adds recipe to make trailmix -->
+		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
+			<ingredient name="resourceYuccaFibers" count="5" />
+			<ingredient name="resourceCropSnowberryPlant" count="1"/>
+			<ingredient name="resourceCropGoldenrodPlant" count="1" />
+			<ingredient name="resourceCropChrysanthemumPlant" count="1" />
+			<ingredient name="treePlantedOak1m" count="1"/>
+			<ingredient name="treePlantedMountainPine1m" count="1"/>
+		</recipe>
 	
 	</append>
 	
