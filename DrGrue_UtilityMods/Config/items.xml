@@ -138,7 +138,7 @@
 <item name="Trailmix">
 	<property name="Extends" value="foodCropBlueberries" />
 	<property name="DisplayType" value="foodWater" />
-	<property name="CustomIcon" value="plantedYucca1" /> <property name="CustomIconTint" value="ffffaf" />
+	<property name="CustomIcon" value="plantedYucca1" /> <property name="CustomIconTint" value="FF9933" />
 	<property name="EconomicValue" value="10" />
 	<property name="EconomicBundleSize" value="5" />
 	<property name="CraftingIngredientTime" value="10" />
