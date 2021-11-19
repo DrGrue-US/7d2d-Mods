@@ -1,14 +1,19 @@
 <config>
-
+	
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\traders.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='1.0'][@filename='\Config\traders.xml']" />
 	
 <!-- Increases the number of decorative blocks available at the trader -->
 	<set xpath="/traders/trader_item_groups/trader_item_group[@name='decorativeBlocks']/@count">3</set>
 
 <!-- Adds GasPump to trader inventory as a decorative block -->
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='decorativeBlocks']">
-		<item name="cntGasPump"/>
+		<item name="cntGasPump" count="1"/>
 	</append>	
+	
+<!-- Adds carBattery to trader inventory Secret Stash -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsLow']">
+		<item name="carBattery" count="1,2" quality="0"/>
+	</append>
 	
 </config>
