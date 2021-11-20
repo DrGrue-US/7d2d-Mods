@@ -3,8 +3,7 @@
 <!-- This will log as a WRN to create a log entry on startup showing this file was read --> 
 	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\items.xml']" /> 
 	 
-<!-- Re-add Crafting Tier Bonus to Nerdy Glasses + NerdTats --> 
- 
+<!-- Re-add Crafting Tier Bonus to Nerdy Glasses + NerdTats -->  
 	<insertAfter xpath="/items/item[@name='apparelNerdGlasses']/effect_group">  
 		<effect_group tiered="false" name="Adds Crafting Bonus when Nerd Tats are active">
 			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
@@ -39,6 +38,7 @@
 	<set xpath="/items/item[@name='drinkJarBeer']/property[@name='EconomicValue']/@value">200</set> 
 	<set xpath="/items/item[@name='drinkJarGrainAlcohol']/property[@name='EconomicValue']/@value">300</set> 
  
+<!-- Stacknumber adjustments -->		 
 <!-- Class rules for stacknumber by item type -->		 
 	<set xpath="/items/item[starts-with(@name, 'food')]/property[@name='Stacknumber']/@value">50</set> 
 	<set xpath="/items/item[starts-with(@name, 'drink')]/property[@name='Stacknumber']/@value">50</set> 
@@ -80,7 +80,6 @@
 	<set xpath="/items/item[@name='resourceLeadBundle']/property/property[@name='Create_item_count']/@value">30000</set> 
 	<set xpath="/items/item[@name='resourceCoalBundle']/property/property[@name='Create_item_count']/@value">30000</set>		 
 	<set xpath="/items/item[@name='resourceOilShaleBundle']/property/property[@name='Create_item_count']/@value">30000</set> 
-		 
  
 <!-- Adds gas bundle recipe at same time as regular recipe -->
  	<insertAfter xpath="/items/item[@name='ammoGasCanSchematic']/effect_group">  
@@ -91,8 +90,7 @@
 	</insertAfter> 
  
  
-<!-- Add Casino Bundles --> 
-		 
+<!-- Add casino token bundles --> 		 
 	<append xpath="/items" > 
 		<item name="Duke's 'Fiver' Token"> 
 			<property name="Extends" value="casinoCoin"/> 
@@ -126,8 +124,7 @@
 			</property> 
 		</item>		
 
-<!-- Add Trailmix --> 
-
+<!-- Add Trailmix "You're going to love deez nuts!"--> 
 		<item name="Trailmix">
 			<property name="Extends" value="foodCropBlueberries" />
 			<property name="DisplayType" value="foodWater" />
