@@ -6,9 +6,12 @@
 <!-- Increases the number of decorative blocks available at the trader -->
 	<set xpath="/traders/trader_item_groups/trader_item_group[@name='decorativeBlocks']/@count">3</set>
 
-<!-- Adds GasPump to trader inventory as a decorative block -->
+<!-- Adds cntGasPump,cntToolBoxClosed,cntRollingToolBoxClosed, and cntUtilityCartFull to trader inventory as a decorative block -->
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='decorativeBlocks']">
 		<item name="cntGasPump" count="1"/>
+		<item name="cntToolBoxClosed" count="1"/>
+		<item name="cntRollingToolBoxClosed" count="1"/>
+		<item name="cntUtilityCartFull" count-"1"/>
 	</append>	
 	
 <!-- Adds carBattery to trader inventory Secret Stash -->

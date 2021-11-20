@@ -9,7 +9,7 @@
 <!-- Changes Light Opacity for Bulletproof glass so motion sensors can see through it-->
 	<set xpath="/blocks/block[@name='glassBulletproofMaster']/property[@name='LightOpacity']/@value">0</set>
 		
-<!-- increase stack number for generator banks -->
+<!-- Increase stack number for generator banks -->
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='Stacknumber']/@value">10</set>
 	<set xpath="/blocks/block[@name='solarbank']/property[@name='Stacknumber']/@value">10</set>
 	<set xpath="/blocks/block[@name='batterybank']/property[@name='Stacknumber']/@value">10</set>
@@ -24,7 +24,7 @@
 <!-- Allows advanced rotation of Drawbridge -->
 	<set xpath="/blocks/block[@name='metalReinforcedWoodDrawBridge']/property[@name='OnlySimpleRotations']/@value">false</set>
 	
-<!-- allows player to power and repair streetlights -->
+<!-- Allows player to power and repair streetlights -->
 	<set xpath="/blocks/block[@name='streetLight01']/property[@name='Class']/@value">PoweredLight</set>
 	<append xpath="/blocks/block[@name='streetLight01']">
 		<property name="RequiredPower" value="5"/>
