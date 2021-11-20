@@ -1,7 +1,9 @@
 <config>
-	<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
+	
+<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
 	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\ui_display.xml']"/>
-	<!-- Adds Crafting Tier display info for Nerdy Glasses -->
+
+<!-- Adds Crafting Tier display info for Nerdy Glasses -->
 	<!-- Target code  -->
 	<!-- 
     <item_display_info display_type="clothingNerdGlasses" display_group="groupAttire"> 

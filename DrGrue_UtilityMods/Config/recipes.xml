@@ -1,8 +1,7 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\recipes.xml']" />
-	
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\recipes.xml']" />	
 			
 <!-- Remove vanilla resource bundles -->	
 	<remove xpath="/recipes/recipe[@name='resourceRockSmallBundle']" />
@@ -14,7 +13,7 @@
 	<remove xpath="/recipes/recipe[@name='resourceOilShaleBundle']" />	
 		
 
-<!-- Adds conversion recipes for new resource bundles. -->	
+<!-- Adds recipes for new resource bundles -->	
 	<insertBefore xpath="/recipes/recipe[@name='ammo9mmBulletBall']">	
 		
 		<recipe name="resourceRockSmallBundle" count="1" craft_exp_gain="0" craft_time="10" tags="learnable">
@@ -50,7 +49,7 @@
 <!-- Adds perkAdvancedEngineering tag to carBattery -->
 	<set xpath="/recipes/recipe[@name='carBattery']/@tags">learnable,perkGreaseMonkey,perkAdvancedEngineering,chemStationCrafting</set>	
 	
-<!-- Adds recipes for casino bundles -->	
+<!-- Adds recipes for casino token bundles -->	
 	<append xpath="/recipes" >
 		<recipe name="Duke's 'Fiver' Token" count="1" craft_exp_gain="0" craft_time="1" always_unlocked="true">
 			<ingredient name="casinoCoin" count="5000"/>
@@ -65,7 +64,7 @@
 			<ingredient name="resourceWood" count="5"/>
 		</recipe>
 
-<!-- Adds recipe to make trailmix -->
+<!-- Adds recipe to make Trailmix "You're going to love deez nuts!"--> 
 		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
 			<ingredient name="resourceYuccaFibers" count="5" />
 			<ingredient name="resourceCropSnowberryPlant" count="1"/>

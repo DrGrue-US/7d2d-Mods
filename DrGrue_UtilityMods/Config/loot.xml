@@ -57,6 +57,8 @@
 	<set xpath="/lootcontainers/lootcontainer[@id='52']/@size">8,9</set>
 	<!-- Gas Pump -->
 	<set xpath="/lootcontainers/lootcontainer[@id='64']/@size">8,9</set>
+	<!-- Utility Cart -->
+	<set xpath="/lootcontainers/lootcontainer[@id='117']/@size">8,9</set>
 	<!-- Large rolling toolbox -->
 	<set xpath="/lootcontainers/lootcontainer[@id='124']/@size">8,9</set>
 	<!-- Small toolbox -->
@@ -65,6 +67,6 @@
 	<set xpath="/lootcontainers/lootcontainer[@id='128']/@size">8,9</set>
 	<!-- Freezer display, beverages -->
 	<set xpath="/lootcontainers/lootcontainer[@id='129']/@size">8,9</set>
-	
+		
 	
 </config>

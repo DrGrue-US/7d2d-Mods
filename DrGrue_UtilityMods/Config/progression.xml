@@ -7,7 +7,7 @@
 	<set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTier']/@value">0</set>
 	<set xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@name='CraftingTier']/@value">0</set>
 
-<!-- Unlocks carBattery at same level as batterybank-->
+<!-- Unlocks carBattery at same level as of Advanced Engineering as batterybank-->
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='2,5']/@tags">,carBattery</append>
 
 </config>
