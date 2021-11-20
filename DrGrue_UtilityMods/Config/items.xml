@@ -22,9 +22,6 @@
 <!-- Adds carBattery recipe to Advanced Engineering tree -->
 	<append xpath="/items/item[@name='carBattery']/property[@name='UnlockedBy']/@value">,perkAdvancedEngineering</append>
 
-<!-- Makes carBattery stackable -->	
-	<set xpath="/items/item[@name='carBattery']/property[@name='Stacknumber']/@value">50</set>
-	
 <!-- Makes carBattery Tier-less -->
 	<set xpath="/items/item[@name='carBattery']/property[@class='Attributes']/property[@name='DegradationMax']/@value">6000</set>
 	<set xpath="/items/item[@name='carBattery']/property[@class='Attributes']/property[@name='BatteryMaxLoadInVolts']/@value">50</set>
@@ -59,8 +56,8 @@
 	<set xpath="/items/item[@name='drinkCanEmpty']/property[@name='Stacknumber']/@value">500</set>	 
 	<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">500</set>	 
 	<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">500</set> 
-	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">500</set> 
-	<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">500</set>	 
+	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">5000</set> 
+	<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">5000</set>	 
  
 <!-- meleeTool and Books Exceptions -->	 
 	<set xpath="/items/item[@name='meleeToolTorch']/property[@name='Stacknumber']/@value">50</set>	 
@@ -71,7 +68,6 @@
  
 <!-- Misc Exceptions -->		 
 	<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[@name='carBattery']/property[@name='Stacknumber']/@value">50</set>  
 	<set xpath="/items/item[@name='candle']/property[@name='Stacknumber']/@value">50</set> 
 	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set>	 
 	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set> 
