@@ -4,13 +4,13 @@
 	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\recipes.xml']" />	
 			
 <!-- Remove vanilla resource bundles -->	
-	<remove xpath="/recipes/recipe[@name='resourceRockSmallBundle']" />
-	<remove xpath="/recipes/recipe[@name='resourceWoodBundle']" />
-	<remove xpath="/recipes/recipe[@name='resourceScrapIronBundle']" />
-	<remove xpath="/recipes/recipe[@name='resourcePotassiumNitratePowderBundle']" />
-	<remove xpath="/recipes/recipe[@name='resourceLeadBundle']" />
-	<remove xpath="/recipes/recipe[@name='resourceCoalBundle']" />
-	<remove xpath="/recipes/recipe[@name='resourceOilShaleBundle']" />	
+	<remove xpath="/recipes/recipe[@name='resourceRockSmallBundle']"/>
+	<remove xpath="/recipes/recipe[@name='resourceWoodBundle']"/>
+	<remove xpath="/recipes/recipe[@name='resourceScrapIronBundle']"/>
+	<remove xpath="/recipes/recipe[@name='resourcePotassiumNitratePowderBundle']"/>
+	<remove xpath="/recipes/recipe[@name='resourceLeadBundle']"/>
+	<remove xpath="/recipes/recipe[@name='resourceCoalBundle']"/>
+	<remove xpath="/recipes/recipe[@name='resourceOilShaleBundle']"/>	
 		
 
 <!-- Adds recipes for new resource bundles -->	
@@ -64,28 +64,36 @@
 			<ingredient name="resourceWood" count="5"/>
 		</recipe>
 
+<!-- Adds recipe to make sewing kit -->
+		<recipe name="resourceSewingKit" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceCloth" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+			<ingredient name="ammoDartIron" count="1"/>
+		</recipe>
+
 <!-- Adds recipe to make Trailmix "You're going to love deez nuts!"--> 
 		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
-			<ingredient name="resourceYuccaFibers" count="5" />
+			<ingredient name="resourceYuccaFibers" count="5"/>
 			<ingredient name="resourceCropSnowberryPlant" count="1"/>
-			<ingredient name="resourceCropGoldenrodPlant" count="1" />
-			<ingredient name="resourceCropChrysanthemumPlant" count="1" />
+			<ingredient name="resourceCropGoldenrodPlant" count="1"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 			<ingredient name="treePlantedOak1m" count="1"/>
 		</recipe>
 
 		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
-			<ingredient name="resourceYuccaFibers" count="5" />
+			<ingredient name="resourceYuccaFibers" count="5"/>
 			<ingredient name="resourceCropSnowberryPlant" count="1"/>
-			<ingredient name="resourceCropGoldenrodPlant" count="1" />
-			<ingredient name="resourceCropChrysanthemumPlant" count="1" />
+			<ingredient name="resourceCropGoldenrodPlant" count="1"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 			<ingredient name="treePlantedMountainPine1m" count="1"/>
 		</recipe>
 
 		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
-			<ingredient name="resourceYuccaFibers" count="5" />
+			<ingredient name="resourceYuccaFibers" count="5"/>
 			<ingredient name="resourceCropSnowberryPlant" count="1"/>
-			<ingredient name="resourceCropGoldenrodPlant" count="1" />
-			<ingredient name="resourceCropChrysanthemumPlant" count="1" />
+			<ingredient name="resourceCropGoldenrodPlant" count="1"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 			<ingredient name="treePlantedWinterPine1m" count="1"/>
 		</recipe>
 		

@@ -41,6 +41,11 @@
 	<append xpath="/lootcontainers/lootgroup[@name='groupApparelHats']" >
 			<item name="armorSantaHat" mods="dye" mod_chance="0.00"/>
 	</append>	
+
+<!-- Adds sewing kit schematic to loot list -->
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT0']">
+		<item name="resourceSewingKitSchematic"/>
+	</append>
 	
 <!-- Makes various containers as big as a storage box because I like to use them for storage -->
 	<!-- military munitions ammo box -->

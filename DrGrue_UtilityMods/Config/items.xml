@@ -87,8 +87,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoGasCanBundle" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		</effect_group>
-	</insertAfter> 
- 
+	</insertAfter>  
  
 <!-- Add casino token bundles --> 		 
 	<append xpath="/items" > 
@@ -122,6 +121,19 @@
 				<property name="Create_item" value="casinoCoin"/> 
 				<property name="Create_item_count" value="30000"/> 
 			</property> 
+		</item>
+
+<!-- Add Sewing Kit Schematic --> 
+		<item name="resourceSewingKitSchematic">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="resourceSewingKit"/>
+			<property name="Unlocks" value="resourceSewingKit"/>
+			<property name="DescriptionKey" value="resourceSewingKitSchematicDesc"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceSewingKit" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
 		</item>		
 
 <!-- Add Trailmix "You're going to love deez nuts!"--> 
