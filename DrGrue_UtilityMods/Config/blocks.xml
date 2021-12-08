@@ -19,20 +19,10 @@
 	<remove xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/property[@class='Explosion']" />
 	<remove xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/property[@class='Explosion']" />
 	<remove xpath="/blocks/block[@name='cntBusSchool']/property[@class='Explosion']" />
-	<remove xpath="/blocks/block[@name='cntGasPump']/property[@class='Explosion']" />
+	<remove xpath="/blocks/block[@name='cntGasPumpRandomLootHelper']/property[@class='Explosion']" />
 	
 <!-- Allows advanced rotation of Drawbridge -->
 	<set xpath="/blocks/block[@name='metalReinforcedWoodDrawBridge']/property[@name='OnlySimpleRotations']/@value">false</set>
 	
-<!-- Allows player to power and repair streetlights -->
-	<set xpath="/blocks/block[@name='streetLight01']/property[@name='Class']/@value">PoweredLight</set>
-	<append xpath="/blocks/block[@name='streetLight01']">
-		<property name="RequiredPower" value="5"/>
-		<property name="Light" value="1"/>
-		<property class="RepairItems">
-			<property name="resourceElectricParts" value="6"/>
-			<property name="resourceScrapIron" value="40"/>
-		</property>
-	</append>		
 		
 </config>

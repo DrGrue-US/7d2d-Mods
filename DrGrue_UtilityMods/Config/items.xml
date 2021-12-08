@@ -34,10 +34,6 @@
 		</effect_group>
 	</insertAfter>	
 	 
-<!-- EconomicValue Changes to make Beer and Grain Alcohol viable trade goods -->	 
-	<set xpath="/items/item[@name='drinkJarBeer']/property[@name='EconomicValue']/@value">200</set> 
-	<set xpath="/items/item[@name='drinkJarGrainAlcohol']/property[@name='EconomicValue']/@value">300</set> 
- 
 <!-- Stacknumber adjustments -->		 
 <!-- Class rules for stacknumber by item type -->		 
 	<set xpath="/items/item[starts-with(@name, 'food')]/property[@name='Stacknumber']/@value">50</set> 

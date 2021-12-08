@@ -3,17 +3,6 @@
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
 	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\traders.xml']" />
 	
-<!-- Increases the number of decorative blocks available at the trader -->
-	<set xpath="/traders/trader_item_groups/trader_item_group[@name='decorativeBlocks']/@count">3</set>
-
-<!-- Adds cntGasPump, cntToolBoxClosed, cntRollingToolBoxClosed, and cntUtilityCartFull to trader inventory as a decorative block -->
-	<append xpath="/traders/trader_item_groups/trader_item_group[@name='decorativeBlocks']">
-		<item name="cntGasPump" count="1"/>
-		<item name="cntToolBoxClosed" count="1"/>
-		<item name="cntRollingToolBoxClosed" count="1"/>
-		<item name="cntUtilityCartFull" count="1"/>
-	</append>
-	
 <!-- Adds resourceSewingKit to trader inventory as a tool -->
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
 		<item name="resourceRepairKit" count="1,4" />
@@ -28,5 +17,6 @@
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsLow']">
 		<item name="resourceSewingKitSchematic" count="1"/>
 	</append>
+	
 	
 </config>

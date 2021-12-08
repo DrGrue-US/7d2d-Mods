@@ -75,7 +75,7 @@
 <!-- Adds recipe to make Trailmix "You're going to love deez nuts!"--> 
 		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
 			<ingredient name="resourceYuccaFibers" count="5"/>
-			<ingredient name="resourceCropSnowberryPlant" count="1"/>
+			<ingredient name="foodCropYuccaFruit" count="1"/>
 			<ingredient name="resourceCropGoldenrodPlant" count="1"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 			<ingredient name="treePlantedOak1m" count="1"/>
@@ -83,7 +83,7 @@
 
 		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
 			<ingredient name="resourceYuccaFibers" count="5"/>
-			<ingredient name="resourceCropSnowberryPlant" count="1"/>
+			<ingredient name="foodCropYuccaFruit" count="1"/>
 			<ingredient name="resourceCropGoldenrodPlant" count="1"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 			<ingredient name="treePlantedMountainPine1m" count="1"/>
@@ -91,7 +91,7 @@
 
 		<recipe name="Trailmix" count="1" craft_exp_gain="0" craft_time="10" always_unlocked="true">
 			<ingredient name="resourceYuccaFibers" count="5"/>
-			<ingredient name="resourceCropSnowberryPlant" count="1"/>
+			<ingredient name="foodCropYuccaFruit" count="1"/>
 			<ingredient name="resourceCropGoldenrodPlant" count="1"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 			<ingredient name="treePlantedWinterPine1m" count="1"/>
