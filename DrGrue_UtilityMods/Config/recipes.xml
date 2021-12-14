@@ -1,7 +1,7 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\recipes.xml']" />	
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.0'][@filename='\Config\recipes.xml']" />	
 			
 <!-- Remove vanilla resource bundles -->	
 	<remove xpath="/recipes/recipe[@name='resourceRockSmallBundle']"/>
