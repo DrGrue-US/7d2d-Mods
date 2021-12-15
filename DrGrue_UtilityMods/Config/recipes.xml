@@ -65,7 +65,7 @@
 		</recipe>
 
 <!-- Adds recipe to make sewing kit -->
-		<recipe name="resourceSewingKit" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<recipe name="resourceSewingKit" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceCloth" count="5"/>
 			<ingredient name="resourceScrapPolymers" count="5"/>
 			<ingredient name="resourceYuccaFibers" count="5"/>
