@@ -9,6 +9,13 @@
 
 <!-- Unlocks carBattery at same level as of Advanced Engineering as batterybank-->
 	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='2,5']/@tags">,carBattery</append>
+
+<!-- Unlocks powered rollup doors with other powered doors -->
+	<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="rollUpDoor3x3VariantHelperPowered,rollUpDoor5x4VariantHelperPowered,rollUpDoor7x4VariantHelperPowered"/>
+		</effect_group>
+	</append>
 	
 
 </config>

@@ -21,8 +21,434 @@
 	<remove xpath="/blocks/block[@name='cntBusSchool']/property[@class='Explosion']" />
 	<remove xpath="/blocks/block[@name='cntGasPumpRandomLootHelper']/property[@class='Explosion']" />
 	
-<!-- Allows advanced rotation of Drawbridge -->
+<!-- Allows advanced rotation of drawbridge and rollup doors -->
 	<set xpath="/blocks/block[@name='metalReinforcedWoodDrawBridge']/property[@name='OnlySimpleRotations']/@value">false</set>
+	<set xpath="/blocks/block[@name='rollUpDoor3x3White']/property[@name='OnlySimpleRotations']/@value">false</set>
+	<set xpath="/blocks/block[@name='rollUpDoor5x4White']/property[@name='OnlySimpleRotations']/@value">false</set>
+	<set xpath="/blocks/block[@name='rollUpDoor7x4White']/property[@name='OnlySimpleRotations']/@value">false</set>
+
+<!-- Add powered VariantHelpers of rollup doors -->
+	<insertAfter xpath="/blocks/block[@name='rollUpDoor7x4VariantHelper']">	
+
+		<block name="rollUpDoor3x3VariantHelperPowered">
+			<property name="Extends" value="rollUpDoor3x3White"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="rollUpDoor3x3BrownPowered,rollUpDoor3x3RedPowered,rollUpDoor3x3OrangePowered,rollUpDoor3x3YellowPowered,rollUpDoor3x3GreenPowered,rollUpDoor3x3BluePowered,rollUpDoor3x3PurplePowered,rollUpDoor3x3GreyPowered,rollUpDoor3x3WhitePowered,rollUpDoor3x3BlackPowered,rollUpDoor3x3PinkPowered"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+
+		<block name="rollUpDoor5x4VariantHelperPowered">
+			<property name="Extends" value="rollUpDoor5x4White"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="rollUpDoor5x4BrownPowered,rollUpDoor5x4RedPowered,rollUpDoor5x4OrangePowered,rollUpDoor5x4YellowPowered,rollUpDoor5x4GreenPowered,rollUpDoor5x4BluePowered,rollUpDoor5x4PurplePowered,rollUpDoor5x4GreyPowered,rollUpDoor5x4WhitePowered,rollUpDoor5x4BlackPowered,rollUpDoor5x4PinkPowered"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+
+		<block name="rollUpDoor7x4VariantHelperPowered">
+			<property name="Extends" value="rollUpDoor7x4White"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="rollUpDoor7x4BrownPowered,rollUpDoor7x4RedPowered,rollUpDoor7x4OrangePowered,rollUpDoor7x4YellowPowered,rollUpDoor7x4GreenPowered,rollUpDoor7x4BluePowered,rollUpDoor7x4PurplePowered,rollUpDoor7x4GreyPowered,rollUpDoor7x4WhitePowered,rollUpDoor7x4BlackPowered,rollUpDoor7x4PinkPowered"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_playerHelpers"/>
+		</block>
+
+	</insertAfter>
+
+<!-- Add powered variants of rollup doors -->
+	<insertAfter xpath="/blocks/block[@name='garageDoorIndustrial_Powered']">		
+
+	<!-- 3x3 rollup door -->
+		<block name="rollUpDoor3x3WhitePowered">
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="Class" value="DoorSecure"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- todo: set for where we start on the new all in one doors -->
+			<property name="StartDamage" value="0"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="LightOpacity" value="1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Tags" value="door"/>
+			<property name="BlockTag" value="Door"/>
+			<property name="Model" value="Entities/Doors/RollUpDoor/rollUpDoorSmallPrefab"/>
+			<property name="Place" value="Door"/> <!-- build restriction -->
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="PlacementDistance" value="7"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,1"/>
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+			<property name="MaxDamage" value="14000"/>
+			<property name="MeshDamage" value="
+				DMG0, 14000,
+				DMG1, 9000,
+				DMG2, 4500
+				"/>
+			<property name="OpenSound" value="door_rollup_small_open"/>
+			<property name="CloseSound" value="door_rollup_small_close"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="10"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="100" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceSpring" count="2,6" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceMechanicalParts" count="2,7" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="FilterTags" value="MC_building,SC_doors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0100"/>
+		</block>
+
+		<!-- Brown -->
+		<block name="rollUpDoor3x3BrownPowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="5E5146"/>
+			<property name="TintColor" value="5E5146"/>
+		</block>
+
+		<!-- Red -->
+		<block name="rollUpDoor3x3RedPowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="844C51"/>
+			<property name="TintColor" value="844C51"/>
+		</block>
+
+		<!-- Orange -->
+		<block name="rollUpDoor3x3OrangePowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="E07F4B"/>
+			<property name="TintColor" value="E07F4B"/>
+		</block>
+
+		<!-- Yellow -->
+		<block name="rollUpDoor3x3YellowPowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="E0DE91"/>
+			<property name="TintColor" value="E0DE91"/>
+		</block>
+
+		<!-- Green -->
+		<block name="rollUpDoor3x3GreenPowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="7C8976"/>
+			<property name="TintColor" value="7C8976"/>
+		</block>
+
+		<!-- Blue -->
+		<block name="rollUpDoor3x3BluePowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="4E79A6"/>
+			<property name="TintColor" value="4E79A6"/>
+		</block>
+
+		<!-- Purple -->
+		<block name="rollUpDoor3x3PurplePowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="746993"/>
+			<property name="TintColor" value="746993"/>
+		</block>
+
+		<!-- Grey -->
+		<block name="rollUpDoor3x3GreyPowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="939393"/>
+			<property name="TintColor" value="939393"/>
+		</block>
+
+		<!-- Black -->
+		<block name="rollUpDoor3x3BlackPowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="000000"/>
+			<property name="TintColor" value="000000"/>
+		</block>
+
+		<!-- Pink -->
+		<block name="rollUpDoor3x3PinkPowered">
+			<property name="Extends" value="rollUpDoor3x3WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor3x3White"/>
+			<property name="CustomIconTint" value="A686A8"/>
+			<property name="TintColor" value="A686A8"/>
+		</block>
+
+	<!-- 5x4 rollup door -->
+		<block name="rollUpDoor5x4WhitePowered">
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="Class" value="DoorSecure"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- todo: set for where we start on the new all in one doors -->
+			<property name="StartDamage" value="0"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="LightOpacity" value="1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Tags" value="door"/>
+			<property name="BlockTag" value="Door"/>
+			<property name="Model" value="Entities/Doors/RollUpDoor/rollUpDoorMediumPrefab"/>
+			<property name="Place" value="Door"/> <!-- build restriction -->
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="PlacementDistance" value="7"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="5,4,1"/>
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+			<property name="MaxDamage" value="14000"/>
+			<property name="MeshDamage" value="
+				DMG0, 14000,
+				DMG1, 9000,
+				DMG2, 4500
+				"/>
+			<property name="OpenSound" value="door_rollup_medium_open"/>
+			<property name="CloseSound" value="door_rollup_medium_close"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="15"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="150" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceSpring" count="2,6" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceMechanicalParts" count="2,7" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="FilterTags" value="MC_building,SC_doors"/>
+			<property name="SortOrder1" value="7060"/>
+			<property name="SortOrder2" value="0100"/>
+		</block>
+
+		<!-- Brown -->
+		<block name="rollUpDoor5x4BrownPowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="5E5146"/>
+			<property name="TintColor" value="5E5146"/>
+		</block>
+
+		<!-- Red -->
+		<block name="rollUpDoor5x4RedPowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="844C51"/>
+			<property name="TintColor" value="844C51"/>
+		</block>
+
+		<!-- Orange -->
+		<block name="rollUpDoor5x4OrangePowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="E07F4B"/>
+			<property name="TintColor" value="E07F4B"/>
+		</block>
+
+		<!-- Yellow -->
+		<block name="rollUpDoor5x4YellowPowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="E0DE91"/>
+			<property name="TintColor" value="E0DE91"/>
+		</block>
+
+		<!-- Green -->
+		<block name="rollUpDoor5x4GreenPowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="7C8976"/>
+			<property name="TintColor" value="7C8976"/>
+		</block>
+
+		<!-- Blue -->
+		<block name="rollUpDoor5x4BluePowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="4E79A6"/>
+			<property name="TintColor" value="4E79A6"/>
+		</block>
+
+		<!-- Purple -->
+		<block name="rollUpDoor5x4PurplePowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="746993"/>
+			<property name="TintColor" value="746993"/>
+		</block>
+
+		<!-- Grey -->
+		<block name="rollUpDoor5x4GreyPowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="939393"/>
+			<property name="TintColor" value="939393"/>
+		</block>
+
+		<!-- Black -->
+		<block name="rollUpDoor5x4BlackPowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="000000"/>
+			<property name="TintColor" value="000000"/>
+		</block>
+
+		<!-- Pink -->
+		<block name="rollUpDoor5x4PinkPowered">
+			<property name="Extends" value="rollUpDoor5x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor5x4White"/>
+			<property name="CustomIconTint" value="A686A8"/>
+			<property name="TintColor" value="A686A8"/>
+		</block>
+
+	<!-- 7x4 rollup door -->
+		<block name="rollUpDoor7x4WhitePowered">
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="Class" value="DoorSecure"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- todo: set for where we start on the new all in one doors -->
+			<property name="StartDamage" value="0"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="LightOpacity" value="1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Tags" value="door"/>
+			<property name="BlockTag" value="Door"/>
+			<property name="Model" value="Entities/Doors/RollUpDoor/rollUpDoorLargePrefab"/>
+			<property name="Place" value="Door"/> <!-- build restriction -->
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="PlacementDistance" value="7"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="7,4,1"/>
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+			<property name="MaxDamage" value="14000"/>
+			<property name="MeshDamage" value="
+				DMG0, 14000,
+				DMG1, 9000,
+				DMG2, 4500
+				"/>
+			<property name="OpenSound" value="door_rollup_large_open"/>
+			<property name="CloseSound" value="door_rollup_large_close"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="20"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+			<drop event="Destroy" name="resourceSpring" count="2,6" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceMechanicalParts" count="2,7" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_building,SC_doors"/>
+		</block>
+
+		<!-- Brown -->
+		<block name="rollUpDoor7x4BrownPowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="5E5146"/>
+			<property name="TintColor" value="5E5146"/>
+		</block>
+
+		<!-- Red -->
+		<block name="rollUpDoor7x4RedPowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="844C51"/>
+			<property name="TintColor" value="844C51"/>
+		</block>
+
+		<!-- Orange -->
+		<block name="rollUpDoor7x4OrangePowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="E07F4B"/>
+			<property name="TintColor" value="E07F4B"/>
+		</block>
+
+		<!-- Yellow -->
+		<block name="rollUpDoor7x4YellowPowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="E0DE91"/>
+			<property name="TintColor" value="E0DE91"/>
+		</block>
+
+		<!-- Green -->
+		<block name="rollUpDoor7x4GreenPowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="7C8976"/>
+			<property name="TintColor" value="7C8976"/>
+		</block>
+
+		<!-- Blue -->
+		<block name="rollUpDoor7x4BluePowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="4E79A6"/>
+			<property name="TintColor" value="4E79A6"/>
+		</block>
+
+		<!-- Purple -->
+		<block name="rollUpDoor7x4PurplePowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="746993"/>
+			<property name="TintColor" value="746993"/>
+		</block>
+
+		<!-- Grey -->
+		<block name="rollUpDoor7x4GreyPowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="939393"/>
+			<property name="TintColor" value="939393"/>
+		</block>
+
+		<!-- Black -->
+		<block name="rollUpDoor7x4BlackPowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="000000"/>
+			<property name="TintColor" value="000000"/>
+		</block>
+
+		<!-- Pink -->
+		<block name="rollUpDoor7x4PinkPowered">
+			<property name="Extends" value="rollUpDoor7x4WhitePowered"/>
+			<property name="CustomIcon" value="rollUpDoor7x4White"/>
+			<property name="CustomIconTint" value="A686A8"/>
+			<property name="TintColor" value="A686A8"/>
+		</block>
+
+	</insertAfter>	
 	
 		
 </config>

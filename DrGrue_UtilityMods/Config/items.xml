@@ -157,7 +157,17 @@
 				</effect_group>
 			</item>		 
 		 
-	</append> 
+	</append>
+
+<!-- Unlocks powered rollupdoor with other powered doors --> 
+
+	<append xpath="/items/item[@name='poweredDoorsSchematic']">
+		<effect_group>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="rollUpDoor3x3VariantHelperPowered" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="rollUpDoor5x4VariantHelperPowered" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="rollUpDoor7x4VariantHelperPowered" operation="set" value="1"/>			
+		</effect_group>
+	</append>
 	 
  
 </config>

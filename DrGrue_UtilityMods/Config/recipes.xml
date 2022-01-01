@@ -46,6 +46,33 @@
 
 	</insertBefore>
 
+<!-- Add powered variants of rollup doors --> 
+
+	<insertAfter xpath="/recipes/recipe[@name='rollUpDoor7x4VariantHelper']">	
+
+		<recipe name="rollUpDoor3x3VariantHelperPowered" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceForgedIron" count="100"/>
+			<ingredient name="resourceSpring" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+		</recipe>
+
+		<recipe name="rollUpDoor5x4VariantHelperPowered" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceForgedIron" count="150"/>
+			<ingredient name="resourceSpring" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+		</recipe>
+
+		<recipe name="rollUpDoor7x4VariantHelperPowered" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+			<ingredient name="resourceForgedIron" count="200"/>
+			<ingredient name="resourceSpring" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+		</recipe>
+
+	</insertAfter>	
+
 <!-- Adds perkAdvancedEngineering tag to carBattery -->
 	<set xpath="/recipes/recipe[@name='carBattery']/@tags">learnable,perkGreaseMonkey,perkAdvancedEngineering,chemStationCrafting</set>	
 	
@@ -98,5 +125,6 @@
 		</recipe>
 		
 	</append>
+	
 	
 </config>
