@@ -84,6 +84,11 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		</effect_group>
 	</insertAfter>  
+
+<!-- Makes Sewingkit unlockable by new schematic -->
+	<insertAfter xpath="/items/item[@name='resourceSewingKit']/property[@name='Group']">
+		<property name="UnlockedBy" value="resourceSewingKitSchematic" />
+	</insertAfter>
  
 <!-- Add casino token bundles --> 		 
 	<append xpath="/items" > 
