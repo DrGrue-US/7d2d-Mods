@@ -90,6 +90,7 @@
 			<property name="MultiBlockDim" value="3,3,1"/>
 			<property name="OnlySimpleRotations" value="false"/>
 			<property name="ModelOffset" value="0,0,0"/>
+			<property name="WireOffset" value="0,2.5,0"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="35"/>
 			<property name="MaxDamage" value="14000"/>
 			<property name="MeshDamage" value="
@@ -218,6 +219,7 @@
 			<property name="MultiBlockDim" value="5,4,1"/>
 			<property name="OnlySimpleRotations" value="false"/>
 			<property name="ModelOffset" value="0,0,0"/>
+			<property name="WireOffset" value="0,3.5,0"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="35"/>
 			<property name="MaxDamage" value="14000"/>
 			<property name="MeshDamage" value="
@@ -346,6 +348,7 @@
 			<property name="MultiBlockDim" value="7,4,1"/>
 			<property name="OnlySimpleRotations" value="false"/>
 			<property name="ModelOffset" value="0,0,0"/>
+			<property name="WireOffset" value="0,3.5,0"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="35"/>
 			<property name="MaxDamage" value="14000"/>
 			<property name="MeshDamage" value="
