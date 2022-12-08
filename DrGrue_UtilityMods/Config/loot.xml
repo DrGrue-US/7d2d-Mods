@@ -4,7 +4,6 @@
 	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\loot.xml']" />
 	
 <!-- Increase the chance to get at least 1 egg to 50% and ~25% to get an additional 1-2 eggs -->
-
 	<append xpath="/lootcontainers/lootcontainer[@name='groupBirdNest01']">
 		<item name="foodEgg" count="1"/>
 	</append>
