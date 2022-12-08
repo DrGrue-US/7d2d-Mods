@@ -1,8 +1,14 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A19.0'][@filename='\Config\loot.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\loot.xml']" />
 	
+<!-- Increase the chance to get at least 1 egg to 50% and ~25% to get an additional 1-2 eggs -->
+
+	<append xpath="/lootcontainers/lootcontainer[@name='groupBirdNest01']">
+		<item name="foodEgg" count="1"/>
+	</append>
+
 <!-- Adds 'Fiver' Token to Rare Ores, Apache Artifact Chest, Buried Treasures, and Mountain Man Chest -->
 	<append xpath="/lootcontainers/lootgroup[@name='rareOres']">
 		<item name="Duke's 'Fiver' Token" count="1" prob="0.02"/> <!-- 1 in 1000 -->
