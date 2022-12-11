@@ -4,10 +4,8 @@
 	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\entityclasses.xml']" />
 	
 <!-- Changes despawn time for dropped loot containers -->
-    <config>
         <set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">300</set>
         <set xpath="/entity_classes/entity_class[starts-with(@name, 'EntityLootContainer')]/property[@name='TimeStayAfterDeath']/@value">1800</set>
-    </config>
 
 	
 </config>
