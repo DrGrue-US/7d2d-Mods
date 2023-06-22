@@ -1,22 +1,22 @@
 <config>
 	
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\traders.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.E'][@filename='\Config\traders.xml']" />
 	
 <!-- Adds resourceSewingKit to trader inventory as a tool -->
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
-		<item name="resourceRepairKit" count="1,4" />
+		<item name="resourceSewingKit" count="1,4" />
 	</append>
 	
-<!-- Adds carBattery to trader inventory Secret Stash -->
-	<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsLow']">
+<!-- Adds carBattery to trader inventory -->
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='vehicleTier2']">
 		<item name="carBattery" count="1,2" quality="0"/>
 	</append>
 	
 <!-- Adds resourceSewingKitSchematic to trader inventory Secret Stash -->
-	<append xpath="/traders/trader_item_groups/trader_item_group[@name='stashOnlyItemsLow']">
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderGeneral']">
 		<item name="resourceSewingKitSchematic" count="1"/>
-	</append>
+	</append>	
 	
 	
 </config>

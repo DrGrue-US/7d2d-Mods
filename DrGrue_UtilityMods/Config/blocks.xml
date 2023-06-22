@@ -1,7 +1,7 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\blocks.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.E'][@filename='\Config\blocks.xml']" />
 	
 <!-- Doubles output of batteries so that Tierless battery output are equal to Tier 6 output -->
 	<set xpath="/blocks/block[@name='batterybank']/property[@name='OutputPerStack']/@value">100</set>
@@ -33,8 +33,9 @@
 		<block name="rollUpDoor3x3VariantHelperPowered">
 			<property name="Extends" value="rollUpDoor3x3White"/>
 			<property name="CustomIcon" value="rollUpDoor3x3White"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
 			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+			<property name="DisplayType" value="blockMulti" />
 			<property name="ItemTypeIcon" value="all_blocks"/>
 			<property name="SelectAlternates" value="true"/>
 			<property name="PlaceAltBlockValue" value="rollUpDoor3x3BrownPowered,rollUpDoor3x3RedPowered,rollUpDoor3x3OrangePowered,rollUpDoor3x3YellowPowered,rollUpDoor3x3GreenPowered,rollUpDoor3x3BluePowered,rollUpDoor3x3PurplePowered,rollUpDoor3x3GreyPowered,rollUpDoor3x3WhitePowered,rollUpDoor3x3BlackPowered,rollUpDoor3x3PinkPowered"/>
@@ -44,8 +45,9 @@
 		<block name="rollUpDoor5x4VariantHelperPowered">
 			<property name="Extends" value="rollUpDoor5x4White"/>
 			<property name="CustomIcon" value="rollUpDoor5x4White"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
 			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+			<property name="DisplayType" value="blockMulti" />
 			<property name="ItemTypeIcon" value="all_blocks"/>
 			<property name="SelectAlternates" value="true"/>
 			<property name="PlaceAltBlockValue" value="rollUpDoor5x4BrownPowered,rollUpDoor5x4RedPowered,rollUpDoor5x4OrangePowered,rollUpDoor5x4YellowPowered,rollUpDoor5x4GreenPowered,rollUpDoor5x4BluePowered,rollUpDoor5x4PurplePowered,rollUpDoor5x4GreyPowered,rollUpDoor5x4WhitePowered,rollUpDoor5x4BlackPowered,rollUpDoor5x4PinkPowered"/>
@@ -55,8 +57,9 @@
 		<block name="rollUpDoor7x4VariantHelperPowered">
 			<property name="Extends" value="rollUpDoor7x4White"/>
 			<property name="CustomIcon" value="rollUpDoor7x4White"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering,poweredDoorsSchematic"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
 			<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+			<property name="DisplayType" value="blockMulti" />
 			<property name="ItemTypeIcon" value="all_blocks"/>
 			<property name="SelectAlternates" value="true"/>
 			<property name="PlaceAltBlockValue" value="rollUpDoor7x4BrownPowered,rollUpDoor7x4RedPowered,rollUpDoor7x4OrangePowered,rollUpDoor7x4YellowPowered,rollUpDoor7x4GreenPowered,rollUpDoor7x4BluePowered,rollUpDoor7x4PurplePowered,rollUpDoor7x4GreyPowered,rollUpDoor7x4WhitePowered,rollUpDoor7x4BlackPowered,rollUpDoor7x4PinkPowered"/>
@@ -66,7 +69,7 @@
 	</insertAfter>
 
 <!-- Add powered variants of rollup doors -->
-	<insertAfter xpath="/blocks/block[@name='garageDoorIndustrial_Powered']">		
+	<insertAfter xpath="/blocks/block[@name='rollUpDoor7x4Pink']">		
 
 	<!-- 3x3 rollup door -->
 		<block name="rollUpDoor3x3WhitePowered">
@@ -451,7 +454,7 @@
 			<property name="TintColor" value="A686A8"/>
 		</block>
 
-	</insertAfter>	
-	
+	</insertAfter>		
+		
 		
 </config>

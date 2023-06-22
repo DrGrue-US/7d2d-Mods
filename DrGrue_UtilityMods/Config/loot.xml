@@ -1,7 +1,7 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\loot.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.E'][@filename='\Config\loot.xml']" />
 	
 <!-- Increase the chance to get at least 1 egg to 50% and ~25% to get an additional 1-2 eggs -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest01']">
@@ -12,16 +12,22 @@
 	<append xpath="/lootcontainers/lootgroup[@name='rareOres']">
 		<item name="Duke's 'Fiver' Token" count="1" prob="0.02"/> <!-- 1 in 1000 -->
 	</append>
-	<!-- Apache Artifact Chest -->>	
-	<append xpath="/lootcontainers/lootcontainer[@id='56']">
+	<!-- Apache Artifact Chest -->>
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest02']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>	
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest03']">
 		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
 	</append>
-	<!-- Treasure Chest -->	
-	<append xpath="/lootcontainers/lootcontainer[@id='61']">
+	<!-- Buried Treasure Chest -->	
+	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedTreasure']">
 		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
 	</append>
-	<!-- Mountain Man Chest -->	
-	<append xpath="/lootcontainers/lootcontainer[@id='63']">
+	<!-- Old West Chests -->	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest01']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest02']">
 		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
 	</append>
 	
@@ -30,15 +36,22 @@
 		<item name="Duke's Mega Token" count="1" prob="0.01"/> <!-- 1 in 2000 -->
 	</append>
 	<!-- Apache Artifact Chest -->>
-	<append xpath="/lootcontainers/lootcontainer[@id='56']">
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest02']">
 		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
 	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest03']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>	
 	<!-- Buried Treasure Chest -->
-	<append xpath="/lootcontainers/lootcontainer[@id='61']">
+	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedTreasure']">
 		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
 	</append>
-	<!-- Mountain Man Chest -->
-	<append xpath="/lootcontainers/lootcontainer[@id='63']">
+
+	<!-- Old West Chests -->	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest01']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest02']">
 		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
 	</append>
 	
@@ -53,30 +66,19 @@
 	</append>
 	
 <!-- Makes various containers as big as a storage box because I like to use them for storage -->
-	<!-- military munitions ammo box -->
-	<set xpath="/lootcontainers/lootcontainer[@id='40']/@size">8,9</set>	
-	<!-- Lockers -->
-	<set xpath="/lootcontainers/lootcontainer[@id='43']/@size">8,9</set>	
-	<!-- Refrigerator -->
-	<set xpath="/lootcontainers/lootcontainer[@id='47']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[ends-with(@name, 'NOPOP')]/@size">8,9</set>	
 	<!-- Bookcase -->
-	<set xpath="/lootcontainers/lootcontainer[@id='49']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@name='bookcase']/@size">8,9</set>
 	<!-- Pill Case -->
-	<set xpath="/lootcontainers/lootcontainer[@id='51']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@name='medicineCabinet']/@size">8,9</set>
+	<!-- Small Pill Case -->
+	<set xpath="/lootcontainers/lootcontainer[@name='medicalPillCase']/@size">8,9</set>
 	<!-- Small beer cooler -->
-	<set xpath="/lootcontainers/lootcontainer[@id='52']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@name='beerCooler']/@size">8,9</set>
 	<!-- Gas Pump -->
-	<set xpath="/lootcontainers/lootcontainer[@id='64']/@size">8,9</set>
-	<!-- Utility Cart -->
-	<set xpath="/lootcontainers/lootcontainer[@id='117']/@size">8,9</set>
+	<set xpath="/lootcontainers/lootcontainer[@name='gasPump']/@size">8,9</set>
 	<!-- Large rolling toolbox -->
-	<set xpath="/lootcontainers/lootcontainer[@id='124']/@size">8,9</set>
-	<!-- Small toolbox -->
-	<set xpath="/lootcontainers/lootcontainer[@id='125']/@size">8,9</set>
-	<!-- Freezer display, food -->
-	<set xpath="/lootcontainers/lootcontainer[@id='128']/@size">8,9</set>
-	<!-- Freezer display, beverages -->
-	<set xpath="/lootcontainers/lootcontainer[@id='129']/@size">8,9</set>
-		
+	<set xpath="/lootcontainers/lootcontainer[@name='rollingToolBox']/@size">8,9</set>
+	
 	
 </config>

@@ -1,178 +1,84 @@
-<config> 
- 
-<!-- This will log as a WRN to create a log entry on startup showing this file was read --> 
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\items.xml']" /> 
-	 
-<!-- Re-add Crafting Tier Bonus to Nerdy Glasses + NerdTats -->  
-	<insertAfter xpath="/items/item[@name='apparelNerdGlasses']/effect_group">  
-		<effect_group tiered="false" name="Adds Crafting Bonus when Nerd Tats are active">
-			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
-			<passive_effect name="CraftingTier" operation="base_add" value="1"/> 
-			<display_value name="dCraftingTier" value=".5"/> 
-		</effect_group>
-	</insertAfter> 
+<config>
+
+<!-- This will log as a WRN to create a log entry on startup showing this file was read -->
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.E'][@filename='\Config\loot.xml']" />
 	
-	<insertAfter xpath="/items/item[@name='drugNerdTats']/effect_group">  
-		<effect_group tiered="false" name="Adds Crafting Bonus when Nerd Tats are active">	
-			<display_value name="dCraftingTier" value=".5"/> 
-		</effect_group>
-	</insertAfter> 
-	
-<!-- Adds carBattery recipe to Advanced Engineering tree -->
-	<append xpath="/items/item[@name='carBattery']/property[@name='UnlockedBy']/@value">,perkAdvancedEngineering</append>
-
-<!-- Makes carBattery Tier-less -->
-	<set xpath="/items/item[@name='carBattery']/property[@class='Attributes']/property[@name='DegradationMax']/@value">6000</set>
-	<set xpath="/items/item[@name='carBattery']/property[@class='Attributes']/property[@name='BatteryMaxLoadInVolts']/@value">50</set>
-	<set xpath="/items/item[@name='carBattery']/property[@class='Attributes']/property[@name='BatteryDischargeTimeInMinutes']/@value">90</set>
-
-	<remove xpath="/items/item[@name='carBattery']/effect_group" />
-	<insertAfter xpath="/items/item[@name='carBattery']/property[@class='Attributes']">
-		<effect_group name="carBattery" tiered="false"> 
-				<passive_effect name="ModSlots" operation="base_set" value="0" />
-				<passive_effect name="DegradationMax" operation="base_set" value="10000" tier="0" />
-		</effect_group>
-	</insertAfter>	
-	 
-<!-- Stacknumber adjustments -->		 
-<!-- Class rules for stacknumber by item type -->		 
-	<set xpath="/items/item[starts-with(@name, 'food')]/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[starts-with(@name, 'drink')]/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[starts-with(@name, 'foodCrop')]/property[@name='Stacknumber']/@value">5000</set> 
-	<set xpath="/items/item[starts-with(@name, 'ammo')]/property[@name='Stacknumber']/@value">5000</set> 
-	<set xpath="/items/item[starts-with(@name, 'resource')]/property[@name='Stacknumber']/@value">30000</set> 
-	 
-	<set xpath="/items/item[starts-with(@name, 'tool')]/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[starts-with(@name, 'thrown')]/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[starts-with(@name, 'medical')]/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set> 
- 
-<!-- Food/Drink Exceptions -->		 
-	<set xpath="/items/item[@name='drinkCanEmpty']/property[@name='Stacknumber']/@value">500</set>	 
-	<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">500</set>	 
-	<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">500</set> 
-	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">5000</set> 
-	<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">5000</set>	 
- 
-<!-- meleeTool and Books Exceptions -->	 
-	<set xpath="/items/item[@name='meleeToolTorch']/property[@name='Stacknumber']/@value">50</set>	 
-	<set xpath="/items/item[@name='meleeToolWireTool']/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[@name='questMaster']/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">50</set> 
- 
-<!-- Misc Exceptions -->		 
-	<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">50</set>
-	<set xpath="/items/item[@name='candle']/property[@name='Stacknumber']/@value">50</set> 
-	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set>	 
-	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set> 
-		 
-<!-- Resource Bundles -->	 
-	<set xpath="/items/item[@name='resourceRockSmallBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
-	<set xpath="/items/item[@name='resourceWoodBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
-	<set xpath="/items/item[@name='resourceScrapIronBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
-	<set xpath="/items/item[@name='resourcePotassiumNitratePowderBundle']/property/property[@name='Create_item_count']/@value">30000</set>	 
-	<set xpath="/items/item[@name='resourceLeadBundle']/property/property[@name='Create_item_count']/@value">30000</set> 
-	<set xpath="/items/item[@name='resourceCoalBundle']/property/property[@name='Create_item_count']/@value">30000</set>		 
-	<set xpath="/items/item[@name='resourceOilShaleBundle']/property/property[@name='Create_item_count']/@value">30000</set> 
- 
-<!-- Adds gas bundle recipe at same time as regular recipe -->
- 	<insertAfter xpath="/items/item[@name='ammoGasCanSchematic']/effect_group">  
-		<effect_group tiered="false" name="Adds Bundle recipe at same time">	
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoGasCanBundle" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-		</effect_group>
-	</insertAfter>  
-
-<!-- Makes Sewingkit unlockable by new schematic -->
-	<insertAfter xpath="/items/item[@name='resourceSewingKit']/property[@name='Group']">
-		<property name="UnlockedBy" value="resourceSewingKitSchematic" />
-	</insertAfter>
- 
-<!-- Add casino token bundles --> 		 
-	<append xpath="/items" > 
-		<item name="Duke's 'Fiver' Token"> 
-			<property name="Extends" value="casinoCoin"/> 
-			<property name="Stacknumber" value="50"/> <!-- STK resource --> 
-			<property name="CustomIcon" value="casinoCoin" /> 
-			<property name="CustomIconTint" value="ffb0b0" /> 
-			<property name="DescriptionKey" value="casinoCoinDesc"/>	 
-			<property class="Action0"> 
-				<property name="Class" value="OpenBundle"/> 
-				<property name="Delay" value="0"/> 
-				<property name="Use_time" value="0"/> 
-				<property name="Sound_start" value="open_cash_register"/> 
-				<property name="Create_item" value="casinoCoin"/> 
-				<property name="Create_item_count" value="5000"/> 
-			</property> 
-		</item>		 
-		 
-		<item name="Duke's Mega Token"> 
-			<property name="Extends" value="casinoCoin"/> 
-			<property name="Stacknumber" value="50"/> <!-- STK resource --> 
-			<property name="CustomIcon" value="casinoCoin" /> 
-			<property name="CustomIconTint" value="110,173,255" /> 
-			<property name="DescriptionKey" value="casinoCoinDesc"/>	 
-			<property class="Action0"> 
-				<property name="Class" value="OpenBundle"/> 
-				<property name="Delay" value="0"/> 
-				<property name="Use_time" value="0"/> 
-				<property name="Sound_start" value="open_cash_register"/> 
-				<property name="Create_item" value="casinoCoin"/> 
-				<property name="Create_item_count" value="30000"/> 
-			</property> 
-		</item>
-
-<!-- Add Sewing Kit Schematic --> 
-		<item name="resourceSewingKitSchematic">
-			<property name="Extends" value="schematicMaster"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="resourceSewingKit"/>
-			<property name="Unlocks" value="resourceSewingKit"/>
-			<property name="DescriptionKey" value="resourceSewingKitSchematicDesc"/>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceSewingKit" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-			</effect_group>
-		</item>		
-
-<!-- Add Trailmix "You're going to love deez nuts!"--> 
-		<item name="Trailmix">
-			<property name="Extends" value="foodCropBlueberries" />
-			<property name="DisplayType" value="foodWater" />
-			<property name="CustomIcon" value="plantedYucca1" /> <property name="CustomIconTint" value="FF9933" />
-			<property name="EconomicValue" value="10" />
-			<property name="EconomicBundleSize" value="5" />
-			<property name="CraftingIngredientTime" value="10" />
-			<property class="Action0">
-				<property name="Class" value="Eat" />
-				<property name="Delay" value="2.1" />
-				<property name="Use_time" value="..." />
-				<property name="Sound_start" value="player_eating" />
-			</property>
-			<property name="Group" value="Food/Cooking,CFFood/Cooking" />
-				<effect_group tiered="false" name="Food Tier 0">
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5" />
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-5" />
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5" />
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="5" />
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
-					<display_value name="$waterAmountAdd" value="-5" />
-				</effect_group>
-			</item>		 
-		 
+<!-- Increase the chance to get at least 1 egg to 50% and ~25% to get an additional 1-2 eggs -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest01']">
+		<item name="foodEgg" count="1"/>
 	</append>
 
-<!-- Unlocks powered rollupdoor with other powered doors --> 
-
-	<append xpath="/items/item[@name='poweredDoorsSchematic']">
-		<effect_group>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="rollUpDoor3x3VariantHelperPowered" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="rollUpDoor5x4VariantHelperPowered" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="rollUpDoor7x4VariantHelperPowered" operation="set" value="1"/>			
-		</effect_group>
+<!-- Adds 'Fiver' Token to Rare Ores, Apache Artifact Chest, Buried Treasures, and Mountain Man Chest -->
+	<append xpath="/lootcontainers/lootgroup[@name='rareOres']">
+		<item name="Duke's 'Fiver' Token" count="1" prob="0.02"/> <!-- 1 in 1000 -->
 	</append>
-	 
- 
+	<!-- Apache Artifact Chest -->>
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest02']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>	
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest03']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>
+	<!-- Buried Treasure Chest -->	
+	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedTreasure']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>
+	<!-- Old West Chests -->	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest01']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest02']">
+		<item name="Duke's 'Fiver' Token" count="1,3" prob="0.005"/> <!-- 1 in 200 -->
+	</append>
+	
+<!-- Adds Mega Token to Rare Ores, Apache Artifact Chest, Buried Treasures, and Mountain Man Chest -->
+	<append xpath="/lootcontainers/lootgroup[@name='rareOres']">
+		<item name="Duke's Mega Token" count="1" prob="0.01"/> <!-- 1 in 2000 -->
+	</append>
+	<!-- Apache Artifact Chest -->>
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest02']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupRottenChest03']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>	
+	<!-- Buried Treasure Chest -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedTreasure']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>
+
+	<!-- Old West Chests -->	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest01']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>	
+	<append xpath="/lootcontainers/lootgroup[@name='groupOldWestChest02']">
+		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
+	</append>
+	
+<!-- Adds Santa Hat to loot list -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupApparelHats']" >
+			<item name="armorSantaHat" mods="dye" mod_chance="0.00"/>
+	</append>	
+
+<!-- Adds sewing kit schematic to loot list -->
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT0']">
+		<item name="resourceSewingKitSchematic"/>
+	</append>
+	
+<!-- Makes various containers as big as a storage box because I like to use them for storage -->
+	<set xpath="/lootcontainers/lootcontainer[contains(@name, 'NOPOP') or contains(@name, 'player')]/@size">8,9</set>	
+	<!-- Bookcase -->
+	<set xpath="/lootcontainers/lootcontainer[@name='bookcase']/@size">8,9</set>
+	<!-- Pill Case -->
+	<set xpath="/lootcontainers/lootcontainer[@name='medicineCabinet']/@size">8,9</set>
+	<!-- Small Pill Case -->
+	<set xpath="/lootcontainers/lootcontainer[@name='medicalPillCase']/@size">8,9</set>
+	<!-- Small beer cooler -->
+	<set xpath="/lootcontainers/lootcontainer[@name='beerCooler']/@size">8,9</set>
+	<!-- Gas Pump -->
+	<set xpath="/lootcontainers/lootcontainer[@name='gasPump']/@size">8,9</set>
+	<!-- Large rolling toolbox -->
+	<set xpath="/lootcontainers/lootcontainer[@name='rollingToolBox']/@size">8,9</set>
+	
+	
 </config>
