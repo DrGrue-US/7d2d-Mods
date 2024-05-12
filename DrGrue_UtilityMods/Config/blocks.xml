@@ -13,6 +13,15 @@
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='Stacknumber']/@value">10</set>
 	<set xpath="/blocks/block[@name='solarbank']/property[@name='Stacknumber']/@value">10</set>
 	<set xpath="/blocks/block[@name='batterybank']/property[@name='Stacknumber']/@value">10</set>
+
+<!-- Increase stack number for chairs -->
+	<set xpath="/blocks/block[@name='officeChair01']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/blocks/block[@name='oldChair1']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/blocks/block[@name='woodChair1']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/blocks/block[@name='chairFoldingMetalUnfoldedWhite']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/blocks/block[@name='chairFoldingMetalFoldedLeaningWhite']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/blocks/block[@name='chairFoldingMetalFoldedFallenWhite']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/blocks/block[@name='chairCampingWhite']/property[@name='Stacknumber']/@value">100</set>
 		
 <!-- Removes Explosion property from vehicles and gas pump -->
 	<remove xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/property[@class='Explosion']" />
