@@ -66,7 +66,6 @@
 	</append>
 	
 <!-- Makes various containers as big as a storage box because I like to use them for storage -->
-	<set xpath="/lootcontainers/lootcontainer[ends-with(@name, 'NOPOP')]/@size">8,9</set>	
 	<!-- Bookcase -->
 	<set xpath="/lootcontainers/lootcontainer[@name='bookcase']/@size">8,9</set>
 	<!-- Pill Case -->

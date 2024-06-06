@@ -47,7 +47,7 @@
 	</insertBefore>
 
 <!-- Add powered variants of rollup doors --> 
-
+<!--
 	<insertAfter xpath="/recipes/recipe[@name='rollUpDoor7x4VariantHelper']">	
 
 		<recipe name="rollUpDoor3x3VariantHelperPowered" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
@@ -72,7 +72,7 @@
 		</recipe>
 
 	</insertAfter>	
-
+-->
 <!-- Adds perkAdvancedEngineering tag to carBattery -->
 	<set xpath="/recipes/recipe[@name='carBattery']/@tags">learnable,perkGreaseMonkey,perkAdvancedEngineering,chemStationCrafting</set>	
 	
