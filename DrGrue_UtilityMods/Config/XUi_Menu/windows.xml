@@ -1,7 +1,7 @@
 <configs>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\XUi_Menu\windows.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.X'][@filename='\Config\XUi_Menu\windows.xml']" />
 
 	<insertBefore xpath="/windows/window[@name='newContinueGame']/rect[@name='tabs']/rect[@name='tabsContents']/rect[@tab_key='xuiGameSettingsMultiplayer']/grid/gameoption[@name='LandClaimSize']">
 		<gameoption name="LandClaimCount" title="Land Claim Count" value_wrap="false" value_type="int" values="1, 5, 10, 15, 20, 25, 30" display_names="" value_localization_prefix="goLandClaimSizeValue" />
