@@ -1,13 +1,13 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.x'][@filename='\Config\progression.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.X'][@filename='\Config\progression.xml']" />
 
 <!-- Makes carBattery Tierless -->
 	<set xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTier']/@value">0</set>
 	<set xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@name='CraftingTier']/@value">0</set>
-	<set xpath="/progression/perks/crafting_skill[@name='craftingElectrician']/display_entry/unlock_entry[@item='carBattery']/@unlock_tier">0</set>
-	<set xpath="/progression/perks/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@name='CraftingTier']/@value">0</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/display_entry/@has_quality">false</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@name='CraftingTier']/@value">0</set>
 
 
 <!-- Unlocks resourceSewingKit at completion of Needle and Thread -->
@@ -21,5 +21,6 @@
 		</effect_group>
 	</append>
 -->
+
 
 </config>

@@ -1,7 +1,7 @@
 <configs>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A20.X'][@filename='\Config\XUi\windows.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.X'][@filename='\Config\XUi\windows.xml']" />
 
 <!-- Enables target health bar -->
 	<set xpath="/windows/window[@name='windowTargetBar']/@visibility">always</set>

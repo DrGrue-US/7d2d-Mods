@@ -9,7 +9,7 @@
 	</append>
 	
 <!-- Adds carBattery to trader inventory -->
-	<append xpath="/traders/trader_item_groups/trader_item_group[@name='vehicleTier2']">
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderElectrical']">
 		<item name="carBattery" count="1,2" quality="0"/>
 	</append>
 	
