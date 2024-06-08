@@ -56,6 +56,7 @@
 	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">50</set> 
  
 <!-- Food/Drink Exceptions -->		 
+	<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">500</set> 
 	<set xpath="/items/item[@name='foodEgg']/property[@name='Stacknumber']/@value">500</set> 
 	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">5000</set> 
 	<set xpath="/items/item[@name='foodRottingFlesh']/property[@name='Stacknumber']/@value">5000</set>	 
