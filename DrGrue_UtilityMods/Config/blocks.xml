@@ -1,7 +1,7 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.X'][@filename='\Config\blocks.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='Release 1.X'][@filename='\Config\blocks.xml']" />
 	
 <!-- Doubles output of batteries so that Tierless battery output are equal to Tier 6 output -->
 	<set xpath="/blocks/block[@name='batterybank']/property[@name='OutputPerStack']/@value">100</set>

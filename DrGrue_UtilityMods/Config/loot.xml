@@ -1,7 +1,7 @@
 <config>
 
 <!-- This will log as a WRN to create a log entry on startup showing this file was read -->
-	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='A21.X'][@filename='\Config\loot.xml']" />
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='Release 1.X'][@filename='\Config\loot.xml']" />
 	
 <!-- Increase the chance to get at least 1 egg to 50% and ~25% to get an additional 1-2 eggs -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest01']">

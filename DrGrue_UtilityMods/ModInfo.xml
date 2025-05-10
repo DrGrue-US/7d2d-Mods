@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xml>
+	<xml>
 		<Name value="DrGrue_UtilityMods" />
-		<Version value="A21.X Final"/>
+		<DisplayName value="Dr Grue Utility Mod" />
+		<Version value="Release 1.X"/>
 		<Description value="This mod pack provides various quality of life changes for 7d2d. Namely, it adjusts stack and bundle sizes for nearly everything, adds large denomination casino chip bundles, and increases the size of certain containers for use as player storage. Other changes include, adding a charcoal recpie to make use of surplus wood, re-adding the crafting tier bonus for Nerd Glasses to allow for quality 6 crafting, and re-adding the Santa Hat in the off-season, because I like it." />
 		<Author value="DrGrue" />
-		<Website value="https://github.com/GGibeson/7d2d-Mods/releases" />
+		<Website value="https://github.com/DrGrue-US/7d2d-Mods/releases" />
 	
 
-</xml>
+	</xml>
