@@ -1,0 +1,16 @@
+<config> 
+ 
+<!-- This will log as a WRN to create a log entry on startup showing this file was read --> 
+	<remove xpath="/Successfully_Loaded[@modname='DrGrue_UtilityMods'][@version='Release 1.X'][@filename='\Config\item_modifiers.xml']" /> 
+	 
+<!-- Re-add Crafting Tier Bonus to Nerdy Glasses + NerdTats -->  
+	<insertAfter xpath="/item_modifiers/item_modifier[@name='modArmorIntellect']/effect_group">  
+		<effect_group tiered="false" name="Adds Crafting Bonus when Nerd Tats are active">
+			<requirement name="HasBuff" buff="buffDrugNerdTats"/>
+			<passive_effect name="CraftingTier" operation="base_add" value="1"/> 
+			<display_value name="dCraftingTier" value=".5"/> 
+		</effect_group>
+	</insertAfter> 
+
+    
+</config>

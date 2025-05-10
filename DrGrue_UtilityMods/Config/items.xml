@@ -31,16 +31,6 @@
 		</effect_group>
 	</insertAfter>	
 	
-<!-- Adds HP Running Buff to Military Stealth boots -->
-	<insertAfter xpath="/items/item[@name='armorMilitaryStealthBoots']/effect_group">  
-		<effect_group tiered="false" name="Adds boot thermal and HP Running Buff">
-			<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2" />
-			<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5" />
-			<passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running" />
-			<display_value name="dStaminaRegen" value=".2" />
-		</effect_group>
-	</insertAfter>
-	 
 <!-- Stacknumber adjustments -->		 
 <!-- Class rules for stacknumber by item type -->		 
 	<set xpath="/items/item[starts-with(@name, 'food')]/property[@name='Stacknumber']/@value">50</set> 

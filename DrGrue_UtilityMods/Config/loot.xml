@@ -55,11 +55,6 @@
 		<item name="Duke's Mega Token" count="1" prob="0.0025"/> <!-- 1 in 400 -->
 	</append>
 	
-<!-- Adds Santa Hat to loot list -->
-	<append xpath="/lootcontainers/lootgroup[@name='groupApparelHats']" >
-			<item name="armorSantaHat" mods="dye" mod_chance="0.00"/>
-	</append>	
-
 <!-- Adds sewing kit schematic to loot list -->
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT0']">
 		<item name="resourceSewingKitSchematic"/>

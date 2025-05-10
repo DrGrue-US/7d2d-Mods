@@ -9,9 +9,6 @@
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/display_entry/@has_quality">false</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@name='CraftingTier']/@value">0</set>
 
-<!-- Unlocks resourceSewingKit at completion of Needle and Thread -->
-	<append xpath="/progression/perks/book[@name='perkNeedleAndThreadComplete']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags">,resourceSewingKit</append>
-
 <!-- Unlocks powered rollup doors with other powered doors -->
 	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']">
 		<effect_group>
